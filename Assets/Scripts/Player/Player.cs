@@ -6,8 +6,6 @@ public class Player : SingletonMonoBehaviour<Player>
 
     public void ReleasePickup()
     {
-        Debug.Log("Releasing pickup");
-
         PickableSlot?.OnRelease();
         PickableSlot = null;
     }

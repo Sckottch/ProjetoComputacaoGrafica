@@ -18,6 +18,8 @@ public class PlayerMovement : MonoBehaviour
 
         inputActions.Gameplay.Move.performed += ctx => moveInput = ctx.ReadValue<Vector2>();
         inputActions.Gameplay.Move.canceled += ctx => moveInput = Vector2.zero;
+
+        inputActions.Gameplay.Release.started += ctx => Player.Instance.ReleasePickup();
     }
 
     private void OnEnable()

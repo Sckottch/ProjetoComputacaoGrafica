@@ -3,9 +3,9 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class PickableObject : MonoBehaviour, IPickable
 {
-    private Rigidbody body;
+    protected Rigidbody body;
 
-    private void Awake()
+    protected virtual void Awake()
     {
         body = GetComponent<Rigidbody>();
     }

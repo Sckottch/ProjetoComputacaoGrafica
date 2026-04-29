@@ -25,6 +25,8 @@ public class Breaker : MonoBehaviour, IInteractable
             animator.SetTrigger(activateHash);
 
             gameObject.layer = 0;
+            GameManager.Instance.Puzzle1Completed();
+
             return;
         }
 

@@ -1217,14 +1217,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lamp
       objectReference: {fileID: 0}
-    - target: {fileID: 4139747012698478534, guid: 53bdc9e9d97398249bdd766107f3d2f4, type: 3}
-      propertyPath: m_SpotAngle
-      value: 179
-      objectReference: {fileID: 0}
-    - target: {fileID: 4139747012698478534, guid: 53bdc9e9d97398249bdd766107f3d2f4, type: 3}
-      propertyPath: m_InnerSpotAngle
-      value: 120
-      objectReference: {fileID: 0}
     - target: {fileID: 4314058234009226935, guid: 53bdc9e9d97398249bdd766107f3d2f4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

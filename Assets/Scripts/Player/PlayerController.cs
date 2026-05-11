@@ -22,6 +22,12 @@ public class PlayerController : MonoBehaviour
         inputActions.Gameplay.Release.started += ctx => Player.Instance.ReleasePickup();
     }
 
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
+
     private void OnEnable()
     {
         inputActions.Gameplay.Enable();
@@ -34,7 +40,7 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Vector3 moveDir = transform.right * moveInput.x + transform.forward * moveInput.y;
+        Vector3 moveDir = Camera.main.transform.right * moveInput.x + Camera.main.transform.forward * moveInput.y;
 
         body.linearVelocity = new Vector3(moveDir.x * moveSpeed, body.linearVelocity.y, moveDir.z * moveSpeed);
     }

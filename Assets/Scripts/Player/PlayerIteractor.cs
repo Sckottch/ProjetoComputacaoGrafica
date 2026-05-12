@@ -18,9 +18,10 @@ public class PlayerIteractor : MonoBehaviour
     private void Awake()
     {
         controls = new();
-        controls.Gameplay.Interact.started += ctx => TryInteract();
+
 
         originalReticleColor = reticleImage.color;
+        controls.Gameplay.Interact.started += ctx => TryInteract();
     }
 
     private void OnEnable()
@@ -44,7 +45,9 @@ public class PlayerIteractor : MonoBehaviour
 
         if (Physics.Raycast(ray, out RaycastHit hit, interactRange, interactableLayer))
         {
-            if (hit.collider.TryGetComponent(out IInteractable interactable))
+            GameObject hitObj = hit.collider.gameObject;
+
+            if (hitObj.TryGetComponent(out IInteractable interactable))
             {
                 if(currentTarget != interactable)
                 {
@@ -55,7 +58,7 @@ public class PlayerIteractor : MonoBehaviour
                 return;
             }
 
-            if (hit.collider.TryGetComponent(out IPickable pickable) && Player.Instance.PickableSlot == null)
+            if (hitObj.TryGetComponent(out IPickable pickable) && Player.Instance.PickableSlot == null)
             {
                 if(currentPickupTarget != pickable)
                 {
@@ -67,17 +70,17 @@ public class PlayerIteractor : MonoBehaviour
             }
         }
 
-        if (currentTarget != null)
+        if (currentTarget != null || currentPickupTarget != null)
         {
-            currentTarget = null;
-            reticleImage.color = originalReticleColor;
+            ClearTargets();
         }
+    }
 
-        if (currentPickupTarget != null)
-        {
-            currentPickupTarget = null;
-            reticleImage.color = originalReticleColor;
-        }
+    private void ClearTargets()
+    {
+        currentTarget = null;
+        currentPickupTarget = null;
+        reticleImage.color = originalReticleColor;
     }
 
     private void TryInteract()

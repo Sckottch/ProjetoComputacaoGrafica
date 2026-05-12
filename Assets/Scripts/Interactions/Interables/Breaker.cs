@@ -4,6 +4,7 @@ using UnityEngine;
 public class Breaker : MonoBehaviour, IInteractable
 { 
     [SerializeField] private FuseBox box;
+    [SerializeField] private Door door;
 
     private readonly int errorHash = Animator.StringToHash("Error");
     private readonly int activateHash = Animator.StringToHash("Activate");
@@ -25,6 +26,8 @@ public class Breaker : MonoBehaviour, IInteractable
             animator.SetTrigger(activateHash);
 
             gameObject.layer = 0;
+
+            door.UnlockDoor();
             GameManager.Instance.Puzzle1Completed();
 
             return;

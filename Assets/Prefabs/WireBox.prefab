@@ -265,7 +265,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2038052084998614674
 Transform:
   m_ObjectHideFlags: 0
@@ -564,7 +564,9 @@ GameObject:
   - component: {fileID: 1967813098990314381}
   - component: {fileID: 5427247862380754058}
   - component: {fileID: 8251586935876940431}
-  m_Layer: 0
+  - component: {fileID: 8385050862994095121}
+  - component: {fileID: 5132380495174746324}
+  m_Layer: 6
   m_Name: Green
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -580,7 +582,7 @@ Transform:
   m_GameObject: {fileID: 1681568430961936621}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -0.375, y: -1.05, z: -2.1}
+  m_LocalPosition: {x: -0.4, y: -1.05, z: -2.1}
   m_LocalScale: {x: 0.5, y: 0.1, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -643,6 +645,44 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &8385050862994095121
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1681568430961936621}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.0000002, y: 2.0000005, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5132380495174746324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1681568430961936621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e980174471423814993e19b2ebbb1a54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WireBoxButton
+  wireColor: 2
+  wireBox: {fileID: 5534952617285261893}
+  lightObject: {fileID: 7665248923341792095}
+  moveOffset: {x: 0.05, y: 0, z: 0}
+  duration: 0.2
 --- !u!1 &1703250798670182828
 GameObject:
   m_ObjectHideFlags: 0
@@ -783,7 +823,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1791919719342374135
 Transform:
   m_ObjectHideFlags: 0
@@ -1178,7 +1218,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8260422027374382101
 Transform:
   m_ObjectHideFlags: 0
@@ -1262,7 +1302,9 @@ GameObject:
   - component: {fileID: 3258204603152990922}
   - component: {fileID: 731727860808634730}
   - component: {fileID: 6475655814543184644}
-  m_Layer: 0
+  - component: {fileID: 3130433353697398677}
+  - component: {fileID: 3132527768548179197}
+  m_Layer: 6
   m_Name: Blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1278,7 +1320,7 @@ Transform:
   m_GameObject: {fileID: 2740588700714730959}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -0.375, y: 1.05, z: 2.1}
+  m_LocalPosition: {x: -0.4, y: 1.05, z: 2.1}
   m_LocalScale: {x: 0.5, y: 0.1, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1341,6 +1383,44 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &3130433353697398677
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2740588700714730959}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.0000002, y: 2.0000005, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3132527768548179197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2740588700714730959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e980174471423814993e19b2ebbb1a54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WireBoxButton
+  wireColor: 1
+  wireBox: {fileID: 5534952617285261893}
+  lightObject: {fileID: 4804831665869090498}
+  moveOffset: {x: 0.05, y: 0, z: 0}
+  duration: 0.2
 --- !u!1 &2956216862670560515
 GameObject:
   m_ObjectHideFlags: 0
@@ -1351,6 +1431,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1897314652784379026}
   - component: {fileID: 4548124253591817053}
+  - component: {fileID: 5534952617285261893}
   m_Layer: 0
   m_Name: WireBox
   m_TagString: Untagged
@@ -1395,6 +1476,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.5009735, y: 2.9995222, z: 5.0035768}
   m_Center: {x: -0.124857195, y: 0.00023913383, z: -0.0017278194}
+--- !u!114 &5534952617285261893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2956216862670560515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 481a72812f4ff1243816fcf11696cc47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WireBox
+  door: {fileID: 0}
 --- !u!1 &3154690671212567504
 GameObject:
   m_ObjectHideFlags: 0
@@ -1809,7 +1903,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1877432090016659749
 Transform:
   m_ObjectHideFlags: 0
@@ -1899,7 +1993,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8063290003620302169
 Transform:
   m_ObjectHideFlags: 0
@@ -1989,7 +2083,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6840321644249064623
 Transform:
   m_ObjectHideFlags: 0
@@ -2073,7 +2167,9 @@ GameObject:
   - component: {fileID: 639622857626575821}
   - component: {fileID: 3304238764815945330}
   - component: {fileID: 7974014545569146600}
-  m_Layer: 0
+  - component: {fileID: 938964248987473977}
+  - component: {fileID: 7824023967075777727}
+  m_Layer: 6
   m_Name: Red
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2089,7 +2185,7 @@ Transform:
   m_GameObject: {fileID: 5096135406728357146}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -0.375, y: 1.05, z: -2.1}
+  m_LocalPosition: {x: -0.4, y: 1.05, z: -2.1}
   m_LocalScale: {x: 0.5, y: 0.1, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2152,6 +2248,44 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &938964248987473977
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5096135406728357146}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.0000002, y: 2.0000005, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7824023967075777727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5096135406728357146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e980174471423814993e19b2ebbb1a54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WireBoxButton
+  wireColor: 0
+  wireBox: {fileID: 5534952617285261893}
+  lightObject: {fileID: 2002262645190886090}
+  moveOffset: {x: 0.05, y: 0, z: 0}
+  duration: 0.2
 --- !u!1 &5337464517930814476
 GameObject:
   m_ObjectHideFlags: 0
@@ -2466,7 +2600,9 @@ GameObject:
   - component: {fileID: 8201741074441039499}
   - component: {fileID: 3599596649636286718}
   - component: {fileID: 3959086710267219328}
-  m_Layer: 0
+  - component: {fileID: 7795713273672177938}
+  - component: {fileID: 4064098217168710574}
+  m_Layer: 6
   m_Name: Green
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2482,7 +2618,7 @@ Transform:
   m_GameObject: {fileID: 5900317965891723412}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -0.375, y: -0.35, z: 2.1}
+  m_LocalPosition: {x: -0.4, y: -0.35, z: 2.1}
   m_LocalScale: {x: 0.5, y: 0.1, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2545,6 +2681,44 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7795713273672177938
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5900317965891723412}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.0000002, y: 2.0000005, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4064098217168710574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5900317965891723412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e980174471423814993e19b2ebbb1a54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WireBoxButton
+  wireColor: 2
+  wireBox: {fileID: 5534952617285261893}
+  lightObject: {fileID: 2447984810130507293}
+  moveOffset: {x: 0.05, y: 0, z: 0}
+  duration: 0.2
 --- !u!1 &5999242977024249399
 GameObject:
   m_ObjectHideFlags: 0
@@ -2556,7 +2730,9 @@ GameObject:
   - component: {fileID: 7195234529897542683}
   - component: {fileID: 651083930077467202}
   - component: {fileID: 3786241273376067270}
-  m_Layer: 0
+  - component: {fileID: 8858906610837632227}
+  - component: {fileID: 2641924415980676360}
+  m_Layer: 6
   m_Name: Yellow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2572,7 +2748,7 @@ Transform:
   m_GameObject: {fileID: 5999242977024249399}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -0.375, y: 0.35, z: -2.1}
+  m_LocalPosition: {x: -0.4, y: 0.35, z: -2.1}
   m_LocalScale: {x: 0.5, y: 0.1, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2635,6 +2811,44 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &8858906610837632227
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5999242977024249399}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.0000002, y: 2.0000005, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2641924415980676360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5999242977024249399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e980174471423814993e19b2ebbb1a54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WireBoxButton
+  wireColor: 3
+  wireBox: {fileID: 5534952617285261893}
+  lightObject: {fileID: 1088186009928504457}
+  moveOffset: {x: 0.05, y: 0, z: 0}
+  duration: 0.2
 --- !u!1 &6609906440183999987
 GameObject:
   m_ObjectHideFlags: 0
@@ -2652,7 +2866,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6846147048813651687
 Transform:
   m_ObjectHideFlags: 0
@@ -2827,7 +3041,9 @@ GameObject:
   - component: {fileID: 8262298665434154908}
   - component: {fileID: 2506935948448188314}
   - component: {fileID: 5176943911360955279}
-  m_Layer: 0
+  - component: {fileID: 8849214639555305359}
+  - component: {fileID: 7533072239994442653}
+  m_Layer: 6
   m_Name: Red
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2843,7 +3059,7 @@ Transform:
   m_GameObject: {fileID: 6657858986806822754}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -0.375, y: 0.35, z: 2.1}
+  m_LocalPosition: {x: -0.4, y: 0.35, z: 2.1}
   m_LocalScale: {x: 0.5, y: 0.1, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2906,6 +3122,44 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &8849214639555305359
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6657858986806822754}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.0000002, y: 2.0000005, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7533072239994442653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6657858986806822754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e980174471423814993e19b2ebbb1a54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WireBoxButton
+  wireColor: 0
+  wireBox: {fileID: 5534952617285261893}
+  lightObject: {fileID: 4424197646117629056}
+  moveOffset: {x: 0.05, y: 0, z: 0}
+  duration: 0.2
 --- !u!1 &6663152589768507342
 GameObject:
   m_ObjectHideFlags: 0
@@ -3134,7 +3388,9 @@ GameObject:
   - component: {fileID: 8333933735445139490}
   - component: {fileID: 1719951839950384776}
   - component: {fileID: 4628065408157184978}
-  m_Layer: 0
+  - component: {fileID: 5694811483188509590}
+  - component: {fileID: 8709252191017286468}
+  m_Layer: 6
   m_Name: Yellow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3150,7 +3406,7 @@ Transform:
   m_GameObject: {fileID: 6946722999359487114}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -0.375, y: -1.05, z: 2.1}
+  m_LocalPosition: {x: -0.4, y: -1.05, z: 2.1}
   m_LocalScale: {x: 0.5, y: 0.1, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3213,6 +3469,44 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5694811483188509590
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6946722999359487114}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.0000002, y: 2.0000005, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8709252191017286468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6946722999359487114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e980174471423814993e19b2ebbb1a54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WireBoxButton
+  wireColor: 3
+  wireBox: {fileID: 5534952617285261893}
+  lightObject: {fileID: 6609906440183999987}
+  moveOffset: {x: 0.05, y: 0, z: 0}
+  duration: 0.2
 --- !u!1 &7216969230155138194
 GameObject:
   m_ObjectHideFlags: 0
@@ -3388,7 +3682,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3520712648061886499
 Transform:
   m_ObjectHideFlags: 0
@@ -3630,7 +3924,9 @@ GameObject:
   - component: {fileID: 4918635758132629913}
   - component: {fileID: 1905580780251628902}
   - component: {fileID: 5273245328637595477}
-  m_Layer: 0
+  - component: {fileID: 8546157006230790974}
+  - component: {fileID: 651719208096583408}
+  m_Layer: 6
   m_Name: Blue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3646,7 +3942,7 @@ Transform:
   m_GameObject: {fileID: 8368593115981087325}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -0.375, y: -0.35, z: -2.1}
+  m_LocalPosition: {x: -0.4, y: -0.35, z: -2.1}
   m_LocalScale: {x: 0.5, y: 0.1, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3709,6 +4005,44 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &8546157006230790974
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8368593115981087325}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.0000002, y: 2.0000005, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &651719208096583408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8368593115981087325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e980174471423814993e19b2ebbb1a54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WireBoxButton
+  wireColor: 1
+  wireBox: {fileID: 5534952617285261893}
+  lightObject: {fileID: 5076257928641523851}
+  moveOffset: {x: 0.05, y: 0, z: 0}
+  duration: 0.2
 --- !u!1 &8377329646846544473
 GameObject:
   m_ObjectHideFlags: 0

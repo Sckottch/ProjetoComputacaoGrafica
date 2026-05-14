@@ -2118,6 +2118,17 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1179474039}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1191788110 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7579504608326532175, guid: 7810e931f9464284b84810bb465c20d4, type: 3}
+  m_PrefabInstance: {fileID: 1677291070}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 953660490b2622f4a9de021329b10871, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Door
 --- !u!1 &1209495937
 GameObject:
   m_ObjectHideFlags: 0
@@ -2948,7 +2959,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1574672416}
-  - component: {fileID: 1574672417}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -2972,18 +2982,6 @@ Transform:
   - {fileID: 1209495938}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1574672417
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1574672415}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54e50edb1c056284ead734217a156960, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GlobalListener
 --- !u!1 &1578897985
 GameObject:
   m_ObjectHideFlags: 0
@@ -3340,7 +3338,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1897314652784379026, guid: 69fc744cc21ac33418aeb54c7a6881d6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.8
+      value: 9.9
       objectReference: {fileID: 0}
     - target: {fileID: 1897314652784379026, guid: 69fc744cc21ac33418aeb54c7a6881d6, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3386,6 +3384,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WireBox
       objectReference: {fileID: 0}
+    - target: {fileID: 5534952617285261893, guid: 69fc744cc21ac33418aeb54c7a6881d6, type: 3}
+      propertyPath: door
+      value: 
+      objectReference: {fileID: 1191788110}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

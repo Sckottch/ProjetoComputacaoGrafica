@@ -5,6 +5,7 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
 {
     public event Action OnPuzzle1Completed;
     public event Action OnPuzzle2Completed;
+    public event Action OnPuzzle3Completed;
 
     public void Puzzle1Completed()
     {
@@ -14,5 +15,10 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
     public void Puzzle2Completed() 
     { 
         OnPuzzle2Completed?.Invoke(); 
+    }
+
+    public void Puzzle3Completed()
+    {
+        OnPuzzle3Completed?.Invoke();
     }
 }

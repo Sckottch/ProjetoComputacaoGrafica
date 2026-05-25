@@ -8,6 +8,7 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
     public event Action OnPuzzle2Completed;
     public event Action OnPuzzle3Completed;
     public event Action OnPuzzle4Completed;
+    public event Action OnGameStart;
 
     protected override void Awake()
     {
@@ -35,6 +36,7 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
         yield return new WaitForSecondsRealtime(2f);
 
         Time.timeScale = 0f;
+        Player.Instance.EnableControls();
     }
 
     public void Puzzle1Completed()
@@ -55,5 +57,10 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
     public void Puzzle4Completed()
     {
         OnPuzzle4Completed?.Invoke();
+    }
+
+    public void GameStarted()
+    {
+        OnGameStart?.Invoke();
     }
 }

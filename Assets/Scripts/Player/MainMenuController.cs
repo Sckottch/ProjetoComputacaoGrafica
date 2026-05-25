@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class MainMenuController : MonoBehaviour
 {
@@ -7,17 +8,24 @@ public class MainMenuController : MonoBehaviour
     private void Awake()
     {
         inputActions = new();
-
-        inputActions.Gameplay.Interact.started += ctx => GameManager.Instance.LoadGame();
     }
 
     private void OnEnable()
     {
         inputActions.Gameplay.Enable();
+
+        inputActions.Gameplay.Interact.started += LoadGameScene;
     }
 
     private void OnDisable()
     {
         inputActions.Gameplay.Disable();
+
+        inputActions.Gameplay.Interact.started -= LoadGameScene;
+    }
+
+    private void LoadGameScene(InputAction.CallbackContext context)
+    {
+        GameManager.Instance.LoadGame();
     }
 }

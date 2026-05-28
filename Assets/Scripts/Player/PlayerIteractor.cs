@@ -10,28 +10,13 @@ public class PlayerIteractor : MonoBehaviour
     [SerializeField] private Transform pickupPosition;
 
     private Color originalReticleColor;
-    private PlayerControlsInputs controls;
 
     private IInteractable currentTarget;
     private IPickable currentPickupTarget;
 
     private void Awake()
     {
-        controls = new();
-
-
         originalReticleColor = reticleImage.color;
-        controls.Gameplay.Interact.started += ctx => TryInteract();
-    }
-
-    private void OnEnable()
-    {
-        controls.Enable();
-    }
-
-    private void OnDisable()
-    {
-        controls.Disable();
     }
 
     private void Update()
@@ -83,7 +68,7 @@ public class PlayerIteractor : MonoBehaviour
         reticleImage.color = originalReticleColor;
     }
 
-    private void TryInteract()
+    public void TryInteract()
     {
         currentTarget?.OnInteract();
 

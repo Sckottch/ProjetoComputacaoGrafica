@@ -34,7 +34,7 @@ public class Timer : MonoBehaviour
 
             UpdateTimeUI();
 
-            // Trigger game over logic here
+            GameManager.Instance.GameEnded(false);
         }
 
         UpdateTimeUI();

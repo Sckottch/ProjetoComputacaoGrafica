@@ -9,6 +9,7 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
     public event Action OnPuzzle3Completed;
     public event Action OnPuzzle4Completed;
     public event Action OnGameStart;
+    public event Action<bool> OnGameEnd;
 
     protected override void Awake()
     {
@@ -19,12 +20,17 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
 
     public void LoadGame()
     {
-        StartCoroutine(LoadSceneAsync(1));
+        StartCoroutine(LoadGameScene());
     }
 
-    private IEnumerator LoadSceneAsync(int sceneIndex)
+    public void LoadMainMenu()
     {
-        AsyncOperation asyncLoad = UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(sceneIndex);
+        StartCoroutine(LoadMainMenuScene());
+    }
+
+    private IEnumerator LoadGameScene()
+    {
+        AsyncOperation asyncLoad = UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(1);
         asyncLoad.allowSceneActivation = false;
 
         while (asyncLoad.progress < 0.9f)
@@ -37,6 +43,20 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
 
         Time.timeScale = 0f;
         Player.Instance.EnableControls();
+    }
+
+    private IEnumerator LoadMainMenuScene()
+    {
+        AsyncOperation asyncLoad = UnityEngine.SceneManagement.SceneManager.LoadSceneAsync(0);
+        asyncLoad.allowSceneActivation = false;
+
+        while (asyncLoad.progress < 0.9f)
+        {
+            yield return null;
+        }
+
+        asyncLoad.allowSceneActivation = true;
+        yield return null;
     }
 
     public void Puzzle1Completed()
@@ -62,5 +82,10 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
     public void GameStarted()
     {
         OnGameStart?.Invoke();
+    }
+
+    public void GameEnded(bool hasWon)
+    {
+        OnGameEnd?.Invoke(hasWon);
     }
 }

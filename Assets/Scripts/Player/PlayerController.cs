@@ -36,6 +36,7 @@ public class PlayerController : MonoBehaviour
         inputActions.Gameplay.Enable();
 
         inputActions.Gameplay.Release.started += OnReleaseInput;
+        inputActions.Gameplay.Interact.started += OnInteractInput;
 
         inputActions.Gameplay.Move.performed += OnMoveInputPerformed;
         inputActions.Gameplay.Move.canceled += OnMoveInputCanceled;
@@ -46,6 +47,10 @@ public class PlayerController : MonoBehaviour
         inputActions.Gameplay.Disable();
 
         inputActions.Gameplay.Release.started -= OnReleaseInput;
+        inputActions.Gameplay.Interact.started -= OnInteractInput;
+
+        inputActions.Gameplay.Move.performed -= OnMoveInputPerformed;
+        inputActions.Gameplay.Move.canceled -= OnMoveInputCanceled;
     }
 
     private void FixedUpdate()
@@ -58,6 +63,11 @@ public class PlayerController : MonoBehaviour
     private void OnReleaseInput(InputAction.CallbackContext context)
     {
         Player.Instance.ReleasePickup();
+    }
+
+    private void OnInteractInput(InputAction.CallbackContext context)
+    {
+        Player.Instance.Interact();
     }
 
     private void OnMoveInputPerformed(InputAction.CallbackContext context)

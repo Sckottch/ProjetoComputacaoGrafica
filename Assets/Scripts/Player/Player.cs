@@ -1,8 +1,10 @@
+using System;
 using UnityEngine;
 
 [RequireComponent(typeof(PlayerController))]
 public class Player : SingletonMonoBehaviour<Player>
 {
+    [SerializeField] private PlayerIteractor iteractor;
     public IPickable PickableSlot { get; private set; }
 
     private PlayerController controller;
@@ -11,6 +13,11 @@ public class Player : SingletonMonoBehaviour<Player>
     {
         base.Awake();
         controller = GetComponent<PlayerController>();
+    }
+
+    public void Interact()
+    {
+        iteractor.TryInteract();
     }
 
     public void ReleasePickup()
@@ -27,5 +34,10 @@ public class Player : SingletonMonoBehaviour<Player>
     public void EnableControls()
     {
         controller.enabled = true;
+    }
+
+    public void DisableControls()
+    {
+        controller.enabled = false;
     }
 }
